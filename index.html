@@ -6,63 +6,102 @@
     <title>Normativa EMS - DULCE RP🍭</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            color: #5d4037;
-            max-width: 800px;
+            color: #4a148c; /* Morado oscuro para lectura */
+            max-width: 900px;
             margin: 0 auto;
             padding: 20px;
-            background-color: #ffeef8;
+            background-color: #f3e5f5; /* Fondo lila muy clarito */
         }
         .container {
-            background-color: #fff;
+            background-color: #ffffff;
             padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 0 15px rgba(255, 182, 193, 0.4);
-            border: 2px solid #ffc1e3;
+            border-radius: 25px;
+            box-shadow: 0 10px 30px rgba(216, 27, 96, 0.2);
+            border: 3px solid #f8bbd0;
         }
-        h1, h2 {
-            color: #d81b60;
+        h1, h2, h3 {
+            color: #ad1457;
             border-bottom: 2px solid #f8bbd0;
             padding-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
         .header-box {
             text-align: center;
-            background-color: #ff80ab;
+            background: linear-gradient(135deg, #ff80ab 0%, #ce93d8 100%);
             color: white;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 30px;
+            padding: 30px;
+            border-radius: 20px;
+            margin-bottom: 40px;
+            border: 4px solid #fff;
         }
         .server-name {
-            font-size: 1.5em;
+            font-size: 1.8em;
             color: #fff;
             font-weight: bold;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
         }
         ul {
             list-style-type: none;
-            padding-left: 20px;
+            padding-left: 10px;
         }
         li {
-            margin-bottom: 8px;
+            margin-bottom: 12px;
+            padding-left: 25px;
+            position: relative;
+        }
+        li::before {
+            content: "🍭";
+            position: absolute;
+            left: 0;
+            font-size: 0.9em;
         }
         .prohibited {
-            color: #c2185b;
+            color: #d81b60;
+            background-color: #fce4ec;
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 5px solid #d81b60;
             font-weight: bold;
-            margin-top: 15px;
+            margin: 15px 0;
         }
         .checked::before {
-            content: "☑ ";
-            color: #ec407a;
+            content: "✨";
+        }
+        .important-note {
+            background-color: #f3e5f5;
+            border: 2px dashed #ab47bc;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px 0;
         }
         hr {
-            margin: 30px 0;
+            margin: 40px 0;
             border: 0;
-            border-top: 2px dashed #f8bbd0;
+            border-top: 3px dotted #f8bbd0;
         }
-        h3 {
+        .rank-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .rank-table th, .rank-table td {
+            border: 1px solid #f8bbd0;
+            padding: 12px;
+            text-align: left;
+        }
+        .rank-table th {
+            background-color: #fce4ec;
             color: #ad1457;
+        }
+        .radio-codes {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            background: #fff;
+            padding: 15px;
         }
     </style>
 </head>
@@ -70,180 +109,120 @@
 
 <div class="container">
     <div class="header-box">
-        <h1>NORMATIVA INTERNA - EMS</h1>
-        <p class="server-name">Servidor: DULCE RP🍭</p>
+        <h1>📜 NORMATIVA GENERAL EMS</h1>
+        <p class="server-name">DULCE RP🍭 - Endulzando la Vida</p>
     </div>
 
-    <h2>1. Principio Fundamental del EMS</h2>
-    <p>El Servicio Médico actúa bajo el principio de:</p>
+    <h2>1. Código de Ética y Neutralidad</h2>
+    <p>El cuerpo de EMS es el pilar de supervivencia en la ciudad. Su comportamiento debe ser ejemplar.</p>
     <ul>
-        <li>Salvar vidas, estabilizar pacientes y mantener neutralidad absoluta.</li>
-        <li>El personal EMS:</li>
-        <ul>
-            <li>No toma bandos.</li>
-            <li>No participa en conflictos armados.</li>
-            <li>No favorece ni perjudica a ningún grupo.</li>
-        </ul>
-        <li class="checked">La prioridad siempre será la vida humana.</li>
+        <li class="checked"><b>Neutralidad Médica:</b> Se atenderá a cualquier persona sin importar su historial delictivo, facción o rango.</li>
+        <li class="checked"><b>Secreto Profesional:</b> No se revelará información de pacientes a terceros, a menos que sea requerido por la LSPD en casos de crímenes flagrantes.</li>
+        <li><b>Respeto absoluto:</b> Queda prohibido el uso de lenguaje soez u ofensivo hacia compañeros o civiles.</li>
     </ul>
 
-    <h2>2. Conducta Profesional en Servicio</h2>
-    <p>Todo miembro del EMS debe:</p>
+    <div class="prohibited">
+        🚫 PROHIBIDO: Participar en actos delictivos, portar armas de fuego o colaborar con bandas mientras se está en servicio (Deber).
+    </div>
+
+    <hr>
+
+    <h2>2. Protocolo de Radio y Comunicación</h2>
+    <p>La radio es una herramienta de trabajo, no un chat social.</p>
+    <div class="radio-codes">
+        <div><b>10-1:</b> Iniciando servicio.</div>
+        <div><b>10-2:</b> Fuera de servicio.</div>
+        <div><b>10-4:</b> Recibido / Afirmativo.</div>
+        <div><b>10-6:</b> Ocupado (En aviso).</div>
+        <div><b>10-14:</b> Traslado al hospital.</div>
+        <div><b>10-20:</b> Ubicación actual.</div>
+        <div><b>10-33:</b> ¡EMERGENCIA! Auxilio médico.</div>
+        <div><b>10-97:</b> Llegada al lugar.</div>
+    </div>
+
+    <hr>
+
+    <h2>3. Seguridad en la Escena y Robos</h2>
+    <p>La integridad del EMS es lo primero. Sin médico, no hay curación.</p>
     <ul>
-        <li>Mantener respeto hacia civiles, policías y criminales.</li>
-        <li>Utilizar lenguaje profesional.</li>
-        <li>Evitar provocaciones.</li>
-        <li>Actuar con madurez ante situaciones tensas.</li>
-    </ul>
-    <p class="prohibited" class="checked">No está permitido:</p>
-    <ul>
-        <li>Burlarse de pacientes.</li>
-        <li>Negarse a atender por rencor personal.</li>
-        <li>Romper personaje (OOC) en medio de atención.</li>
+        <li><b>Tiroteos Activos:</b> Los EMS esperarán a una distancia segura (mínimo 2 manzanas) hasta que la LSPD dé el "Código 4" (Escena Segura).</li>
+        <li><b>Robos a establecimientos:</b> No se intervendrá hasta que los asaltantes se hayan marchado o hayan sido reducidos.</li>
+        <li><b>Zonas Rojas:</b> Prohibido entrar sin escolta policial o autorización expresa del rango más alto online.</li>
     </ul>
 
     <hr>
 
-    <h2>3. Escena Segura (Protocolo Obligatorio)</h2>
-    <p>Antes de intervenir:</p>
+    <h2>4. Normativa de Vehículos y Conducción</h2>
+    <p>Las ambulancias son vehículos de emergencia, no deportivos.</p>
     <ul>
-        <li>Confirmar que la zona está asegurada.</li>
-        <li>Esperar autorización policial si hay situación armada.</li>
-        <li>No ingresar a tiroteos activos.</li>
-        <li class="checked">EMS no es fuerza táctica ni unidad de combate.</li>
-    </ul>
-    <p>Si la escena no es segura:</p>
-    <ul>
-        <li>Retirarse.</li>
-        <li>Solicitar apoyo.</li>
-    </ul>
-
-    <h2>4. Procedimiento Médico en Semi-Rol</h2>
-    <p>Las atenciones deben narrarse con coherencia y lógica.</p>
-    <p>Ejemplo de estructura mínima:</p>
-    <ul>
-        <li>Evaluación inicial (signos vitales).</li>
-        <li>Diagnóstico básico.</li>
-        <li>Estabilización.</li>
-        <li>Tratamiento.</li>
-        <li>Traslado (si aplica).</li>
-    </ul>
-    <p class="checked">Se permite resumir, pero no "curar mágicamente".</p>
-    <p class="prohibited" class="checked">Prohibido:</p>
-    <ul>
-        <li>Reanimar instantáneamente sin rol.</li>
-        <li>Curar heridas graves en segundos.</li>
-        <li>Ignorar lesiones graves para acelerar la trama.</li>
+        <li><b>Uso de Sirenas:</b> Solo se activarán en camino a un aviso (Código 3) o durante traslados críticos.</li>
+        <li><b>Conducción Responsable:</b> Se permite omitir semáforos con precaución, pero causar accidentes por conducción temeraria será motivo de sanción.</li>
+        <li><b>Mantenimiento:</b> Al finalizar el turno, el vehículo debe quedar reparado y con combustible.</li>
     </ul>
 
     <hr>
 
-    <h2>5. Sistema de Reanimación</h2>
+    <h2>5. El Rol de Curación (Semi-RP)</h2>
+    <p>En DULCE RP valoramos la interpretación. No somos "revividores" automáticos.</p>
+    <div class="important-note">
+        <b>Pasos obligatorios para Reanimar (/me y /do):</b>
+        <ol>
+            <li>Comprobar pulso y estado (/me le toma el pulso).</li>
+            <li>Limpiar heridas o aplicar torniquetes según sea el caso.</li>
+            <li>Uso del desfibrilador o RCP si es necesario.</li>
+            <li>Suministrar medicación / Estabilizar.</li>
+        </ol>
+    </div>
     <ul>
-        <li>Solo se podrá reanimar si el sistema del servidor lo permite.</li>
-        <li>Respetar los tiempos de inconsciencia establecidos.</li>
-        <li>No revivir indefinidamente.</li>
-    </ul>
-    <p>Si el paciente tiene:</p>
-    <ul>
-        <li>Muerte permanente autorizada: No intervenir.</li>
-        <li>Estado crítico irreversible: Consultar administración si aplica.</li>
-        <li>El EMS no anula consecuencias narrativas.</li>
-    </ul>
-
-    <h2>6. Prioridad de Atención</h2>
-    <p>Atender según gravedad:</p>
-    <ul>
-        <li>Riesgo vital inmediato.</li>
-        <li>Hemorragias graves.</li>
-        <li>Fracturas.</li>
-        <li>Lesiones leves.</li>
-    </ul>
-    <p class="checked">No priorizar amigos.</p>
-    <p class="checked">No retrasar atención por motivos personales.</p>
-
-    <hr>
-
-    <h2>7. Neutralidad Absoluta</h2>
-    <p>El EMS debe:</p>
-    <ul>
-        <li>Atender tanto policías como criminales.</li>
-        <li>No informar estrategias médicas a terceros.</li>
-        <li>No encubrir delitos.</li>
-    </ul>
-    <p>Si un paciente está detenido:</p>
-    <ul>
-        <li>Se atiende primero.</li>
-        <li>La custodia es responsabilidad policial.</li>
-    </ul>
-
-    <h2>8. Uso del Equipamiento</h2>
-    <p>Permitido:</p>
-    <ul>
-        <li>Botiquín, Desfibrilador, Camilla, Ambulancia y Material médico asignado.</li>
-    </ul>
-    <p class="prohibited">Prohibido:</p>
-    <ul>
-        <li>Portar armas (salvo regla especial del servidor).</li>
-        <li>Usar ambulancia para transporte personal.</li>
-        <li>Uso de equipamiento para beneficio fuera de rol.</li>
+        <li class="checked"><b>Heridas de bala:</b> Obligatorio traslado al hospital para cirugía (Rol de camilla).</li>
+        <li class="checked"><b>Accidentes leves:</b> Se pueden tratar "in situ" con un rol adecuado de vendajes.</li>
     </ul>
 
     <hr>
 
-    <h2>9. Traslado Hospitalario</h2>
-    <ul>
-        <li>Paciente debe estar mínimamente estabilizado.</li>
-        <li>Narrar traslado.</li>
-        <li>Informar estado al llegar.</li>
-        <li class="checked">No abandonar pacientes.</li>
-        <li class="checked">No forzar alta médica sin coherencia.</li>
-    </ul>
-
-    <h2>10. Relación con Otros Departamentos</h2>
-    <ul>
-        <li><strong>Con Policía:</strong> Coordinar escenas y respetar perímetros.</li>
-        <li><strong>Con Civiles:</strong> Mantener trato humanitario y explicar procedimientos.</li>
-        <li><strong>Con Administración:</strong> Reportar abusos o fallos graves.</li>
-    </ul>
-
-    <h2>11. Prohibiciones Específicas en Semi-Rol</h2>
-    <ul>
-        <li class="checked">Godmodding médico.</li>
-        <li class="checked">Curaciones milagrosas.</li>
-        <li class="checked">Manipular heridas para favorecer tramas.</li>
-        <li class="checked">Filtrar información médica privada.</li>
-        <li class="checked">Participar en actividades criminales en servicio.</li>
-    </ul>
+    <h2>6. Jerarquía del Hospital</h2>
+    <table class="rank-table">
+        <tr>
+            <th>Rango</th>
+            <th>Responsabilidad</th>
+        </tr>
+        <tr>
+            <td>Dirección Médica</td>
+            <td>Gestión total y sanciones pesadas.</td>
+        </tr>
+        <tr>
+            <td>Médico Especialista</td>
+            <td>Encargado de cirugías y formación.</td>
+        </tr>
+        <tr>
+            <td>Paramédico</td>
+            <td>Unidad principal de respuesta en calle.</td>
+        </tr>
+        <tr>
+            <td>Residente (Prácticas)</td>
+            <td>En aprendizaje, siempre acompañado.</td>
+        </tr>
+    </table>
 
     <hr>
 
-    <h2>12. Ausencias y Responsabilidad</h2>
+    <h2>7. Infracciones y Sanciones</h2>
+    <p>El incumplimiento de estas normas conlleva:</p>
     <ul>
-        <li>Avisar si no podrás cubrir turno.</li>
-        <li>No dejar escenas médicas a medias.</li>
-        <li>Mantener compromiso con la facción.</li>
+        <li><b>Falta Leve:</b> Advertencia verbal (Mal uso de uniforme, vehículo sucio).</li>
+        <li><b>Falta Grave:</b> Suspensión de 24h a 72h (Mala praxis, falta de respeto, conducción temeraria).</li>
+        <li><b>Falta Muy Grave:</b> Expulsión y Blacklist (Corrupción, portar armas, ignorar avisos por gusto).</li>
     </ul>
 
-    <h2>13. Sanciones Internas</h2>
-    <ul>
-        <li>Advertencia verbal y formal.</li>
-        <li>Suspensión temporal.</li>
-        <li>Expulsión del cuerpo EMS.</li>
-        <li>Las sanciones deben aplicarse con imparcialidad y evidencia.</li>
-    </ul>
-
-    <div style="background-color: #fff0f6; padding: 20px; border-radius: 5px; margin-top: 20px; border: 1px solid #f8bbd0;">
-        <h3>Principio Final del EMS en Semi-Rol</h3>
-        <p>El EMS no está para "revivir y ya", sino para:</p>
-        <ul>
-            <li>Generar rol médico de calidad.</li>
-            <li>Aportar realismo.</li>
-            <li>Crear tensión y dramatismo coherente.</li>
-            <li>Mantener equilibrio narrativo.</li>
-        </ul>
+    <div style="background-color: #f3e5f5; padding: 25px; border-radius: 15px; margin-top: 30px; border: 2px solid #ce93d8; text-align: center;">
+        <h3>💖 Compromiso DULCE RP</h3>
+        <p><i>"Nuestra misión es que cada ciudadano tenga una segunda oportunidad. Rolea con amor, actúa con profesionalidad."</i></p>
     </div>
 </div>
+
+<footer style="text-align: center; margin-top: 20px; color: #ad1457; font-size: 0.8em;">
+    &copy; 2026 DULCE RP🍭 - Todos los derechos reservados a la Administración.
+</footer>
 
 </body>
 </html>
