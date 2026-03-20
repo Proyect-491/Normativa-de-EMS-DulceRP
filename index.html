@@ -82,27 +82,38 @@
             border: 0;
             border-top: 3px dotted #f8bbd0;
         }
-        .rank-table {
+        
+        .rank-table, .codes-table {
             width: 100%;
             border-collapse: collapse;
             margin: 20px 0;
+            background-color: #fff;
         }
-        .rank-table th, .rank-table td {
+        .rank-table th, .rank-table td, .codes-table th, .codes-table td {
             border: 1px solid #f8bbd0;
             padding: 12px;
             text-align: left;
         }
-        .rank-table th {
+        .rank-table th, .codes-table th {
             background-color: #fce4ec;
             color: #ad1457;
+            text-transform: uppercase;
+            font-size: 0.9em;
         }
-        .radio-codes {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-            background: #fff;
-            padding: 15px;
+        .category {
+            background-color: #f3e5f5;
+            font-weight: bold;
+            color: #ad1457;
+            font-size: 0.85em;
+            text-align: center !important;
         }
+        .code {
+            font-weight: bold;
+            color: #ad1457;
+            width: 20%;
+        }
+        .status-green { color: #2e7d32; font-weight: bold; }
+        .status-red { color: #c62828; font-weight: bold; }
     </style>
 </head>
 <body>
@@ -129,32 +140,9 @@
 
     <h2>2. Protocolo de Radio y Comunicación</h2>
     <p>La radio es una herramienta de trabajo, no un chat social.</p>
-    <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manual de Códigos EMS - Roleplay</title>
-    <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #1a1a1a; color: #e0e0e0; display: flex; justify-content: center; padding: 20px; }
-        .container { width: 100%; max-width: 800px; }
-        h2 { text-align: center; color: #ff4d4d; border-bottom: 2px solid #ff4d4d; padding-bottom: 10px; }
-        table { width: 100%; border-collapse: collapse; background-color: #262626; box-shadow: 0 4px 15px rgba(0,0,0,0.5); margin-bottom: 30px; }
-        th { background-color: #ff4d4d; color: white; padding: 12px; text-align: left; text-transform: uppercase; font-size: 0.9em; }
-        td { padding: 12px; border-bottom: 1px solid #3d3d3d; }
-        tr:hover { background-color: #333; }
-        .code { font-weight: bold; color: #ffeb3b; width: 20%; }
-        .status-green { color: #4caf50; font-weight: bold; }
-        .status-red { color: #f44336; font-weight: bold; }
-        .category { background-color: #333; font-weight: bold; color: #bbb; padding: 8px 12px; font-size: 0.85em; }
-    </style>
-</head>
-<body>
-
-<div class="container">
-    <h2>🚑 CÓDIGOS DE RADIO EMS</h2>
-
-    <table>
+    
+    <h3>🚑 CÓDIGOS DE RADIO EMS</h3>
+    <table class="codes-table">
         <thead>
             <tr>
                 <th>Código</th>
@@ -187,7 +175,6 @@
             <tr><td class="code">10-50</td><td>Persona inconsciente</td></tr>
         </tbody>
     </table>
-</div>
     
     <hr>
 
@@ -231,26 +218,30 @@
 
     <h2>6. Jerarquía del Hospital</h2>
     <table class="rank-table">
-        <tr>
-            <th>Rango</th>
-            <th>Responsabilidad</th>
-        </tr>
-        <tr>
-            <td>Dirección Médica</td>
-            <td>Gestión total y sanciones pesadas.</td>
-        </tr>
-        <tr>
-            <td>Médico Especialista</td>
-            <td>Encargado de cirugías y formación.</td>
-        </tr>
-        <tr>
-            <td>Paramédico</td>
-            <td>Unidad principal de respuesta en calle.</td>
-        </tr>
-        <tr>
-            <td>Residente (Prácticas)</td>
-            <td>En aprendizaje, siempre acompañado.</td>
-        </tr>
+        <thead>
+            <tr>
+                <th>Rango</th>
+                <th>Responsabilidad</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Dirección Médica</td>
+                <td>Gestión total y sanciones pesadas.</td>
+            </tr>
+            <tr>
+                <td>Médico Especialista</td>
+                <td>Encargado de cirugías y formación.</td>
+            </tr>
+            <tr>
+                <td>Paramédico</td>
+                <td>Unidad principal de respuesta en calle.</td>
+            </tr>
+            <tr>
+                <td>Residente (Prácticas)</td>
+                <td>En aprendizaje, siempre acompañado.</td>
+            </tr>
+        </tbody>
     </table>
 
     <hr>
