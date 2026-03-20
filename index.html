@@ -129,17 +129,66 @@
 
     <h2>2. Protocolo de Radio y Comunicación</h2>
     <p>La radio es una herramienta de trabajo, no un chat social.</p>
-    <div class="radio-codes">
-        <div><b>10-1:</b> Iniciando servicio.</div>
-        <div><b>10-2:</b> Fuera de servicio.</div>
-        <div><b>10-4:</b> Recibido / Afirmativo.</div>
-        <div><b>10-6:</b> Ocupado (En aviso).</div>
-        <div><b>10-14:</b> Traslado al hospital.</div>
-        <div><b>10-20:</b> Ubicación actual.</div>
-        <div><b>10-33:</b> ¡EMERGENCIA! Auxilio médico.</div>
-        <div><b>10-97:</b> Llegada al lugar.</div>
-    </div>
+    <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual de Códigos EMS - Roleplay</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #1a1a1a; color: #e0e0e0; display: flex; justify-content: center; padding: 20px; }
+        .container { width: 100%; max-width: 800px; }
+        h2 { text-align: center; color: #ff4d4d; border-bottom: 2px solid #ff4d4d; padding-bottom: 10px; }
+        table { width: 100%; border-collapse: collapse; background-color: #262626; box-shadow: 0 4px 15px rgba(0,0,0,0.5); margin-bottom: 30px; }
+        th { background-color: #ff4d4d; color: white; padding: 12px; text-align: left; text-transform: uppercase; font-size: 0.9em; }
+        td { padding: 12px; border-bottom: 1px solid #3d3d3d; }
+        tr:hover { background-color: #333; }
+        .code { font-weight: bold; color: #ffeb3b; width: 20%; }
+        .status-green { color: #4caf50; font-weight: bold; }
+        .status-red { color: #f44336; font-weight: bold; }
+        .category { background-color: #333; font-weight: bold; color: #bbb; padding: 8px 12px; font-size: 0.85em; }
+    </style>
+</head>
+<body>
 
+<div class="container">
+    <h2>🚑 CÓDIGOS DE RADIO EMS</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Significado / Acción</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td colspan="2" class="category">ESTADOS DE SERVICIO</td></tr>
+            <tr><td class="code">10-1</td><td>Iniciando servicio (On-Duty)</td></tr>
+            <tr><td class="code">10-2</td><td>Fuera de servicio (Off-Duty)</td></tr>
+            <tr><td class="code">10-8</td><td class="status-green">Unidad disponible para avisos</td></tr>
+            <tr><td class="code">10-6</td><td class="status-red">Ocupado (En aviso activo)</td></tr>
+            <tr><td class="code">10-7</td><td>Fuera de servicio temporal (Descanso)</td></tr>
+            
+            <tr><td colspan="2" class="category">COMUNICACIÓN Y LOGÍSTICA</td></tr>
+            <tr><td class="code">10-4</td><td>Recibido / Afirmativo</td></tr>
+            <tr><td class="code">10-20</td><td>Ubicación actual</td></tr>
+            <tr><td class="code">10-3</td><td>Silencio en radio (Emergencia en curso)</td></tr>
+            <tr><td class="code">10-97</td><td>Llegada al lugar del aviso</td></tr>
+            <tr><td class="code">10-14</td><td>Traslado de paciente al hospital</td></tr>
+            <tr><td class="code">10-19</td><td>Regresando a base / hospital</td></tr>
+            <tr><td class="code">10-98</td><td>Servicio finalizado / Escena limpia</td></tr>
+
+            <tr><td colspan="2" class="category">ALERTAS Y EMERGENCIAS</td></tr>
+            <tr><td class="code">10-33</td><td class="status-red">¡EMERGENCIA! Auxilio médico inmediato</td></tr>
+            <tr><td class="code">10-31</td><td>Herido por arma blanca</td></tr>
+            <tr><td class="code">10-32</td><td>Herido por arma de fuego</td></tr>
+            <tr><td class="code">10-38</td><td>Se requiere apoyo policial (Escena insegura)</td></tr>
+            <tr><td class="code">10-40</td><td>Accidente de tráfico</td></tr>
+            <tr><td class="code">10-50</td><td>Persona inconsciente</td></tr>
+        </tbody>
+    </table>
+</div>
+    
     <hr>
 
     <h2>3. Seguridad en la Escena y Robos</h2>
